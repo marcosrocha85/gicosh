@@ -30,4 +30,4 @@ Example:
   - Add at the end of text box the following: ;C:\gicosh
 
 * Note: the ; (dot-comma) BEFORE directory. It is necessary to separate our new directory to the path.
-** Second note: If you have any opened Windows Prompt during 'installation', you'll have to close them and open a new one to reload system variables.
+* Second note: If you have any opened Windows Prompt during 'installation', you'll have to close them and open a new one to reload system variables.
