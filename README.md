@@ -10,6 +10,7 @@ The shortcuts and commands under each one are:
 |ga.bat|git add|
 |gb.bat|git branch|
 |gc.bat|git commit|
+|gl.bat|git log|
 |gm.bat|git merge|
 |go.bat|git checkout|
 |gp.bat|git pull|
