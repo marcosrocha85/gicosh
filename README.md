@@ -10,6 +10,7 @@ The shortcuts and commands under each one are:
 |ga.bat|git add|
 |gb.bat|git branch|
 |gc.bat|git commit|
+|gm.bat|git merge|
 |go.bat|git checkout|
 |gp.bat|git pull|
 |gpsh.bat|git push|
@@ -17,6 +18,7 @@ The shortcuts and commands under each one are:
 |grh.bat|git reset HEAD --hard|
 |grm.bat|git rm|
 |gs.bat|git status|
+|gsh.bat|git stash|
 |gsi.bat|git submodule init|
 |gsu.bat|git submodule update --remote --rebase|
 
