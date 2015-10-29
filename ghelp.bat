@@ -9,6 +9,7 @@ echo ฬออออออออฮออออออออออออออออออออออออออออออออออออออน
 echo บga.bat  บgit add                               บ
 echo บgb.bat  บgit branch                            บ
 echo บgc.bat  บgit commit                            บ
+echo บgd.bat  บgit diff                              บ
 echo บgl.bat  บgit log                               บ
 echo บgm.bat  บgit merge                             บ
 echo บgo.bat  บgit checkout                          บ
