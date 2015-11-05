@@ -10,11 +10,14 @@ The shortcuts and commands under each one are:
 |ga.bat|git add|
 |gb.bat|git branch|
 |gc.bat|git commit|
+|gd.bat|git diff|
+|ghelp.bat|This help|
+|gk.bat|gitk|
 |gl.bat|git log|
 |gm.bat|git merge|
 |go.bat|git checkout|
 |gp.bat|git pull|
-|gpsh.bat|git push|
+|gpsh.bat |git push|
 |gr.bat|git reset HEAD|
 |grh.bat|git reset HEAD --hard|
 |grm.bat|git rm|
@@ -22,6 +25,7 @@ The shortcuts and commands under each one are:
 |gsh.bat|git stash|
 |gsi.bat|git submodule init|
 |gsu.bat|git submodule update --remote --rebase|
+|gui.bat|git gui|
 
 ## Installation
 Simply drop the batch files on any directory on your windows path. At my computer I put them on C:\Windows, but you can feel free to put at any place.
