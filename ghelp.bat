@@ -24,5 +24,6 @@ echo บgs.bat   บgit status                            บ
 echo บgsh.bat  บgit stash                             บ
 echo บgsi.bat  บgit submodule init                    บ
 echo บgsu.bat  บgit submodule update --remote --rebaseบ
+echo บgt.bat   บgit tag                               บ
 echo บgui.bat  บgit gui                               บ
 echo ศอออออออออสออออออออออออออออออออออออออออออออออออออผ

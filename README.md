@@ -25,6 +25,7 @@ The shortcuts and commands under each one are:
 |gsh.bat|git stash|
 |gsi.bat|git submodule init|
 |gsu.bat|git submodule update --remote --rebase|
+|gt.bat|git tag|
 |gui.bat|git gui|
 
 ## Installation
