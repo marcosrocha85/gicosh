@@ -10,11 +10,15 @@ The shortcuts and commands under each one are:
 |ga.bat|git add|
 |gb.bat|git branch|
 |gc.bat|git commit|
+|gcl.bat|git clean|
 |gd.bat|git diff|
+|gdtool.bat|git difftool|
+|gf.bat|git fetch|
 |ghelp.bat|This help|
 |gk.bat|gitk|
 |gl.bat|git log|
 |gm.bat|git merge|
+|gmtool.bat|git mergetool|
 |go.bat|git checkout|
 |gp.bat|git pull|
 |gpsh.bat |git push|
