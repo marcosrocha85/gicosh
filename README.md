@@ -1,4 +1,4 @@
-Current version: [v0.0.2](releases/tag/v0.0.2)
+Current version: [v0.0.2](../../releases/tag/v0.0.2)
 
 # gicosh - GIT Command Shortcuts for Windows and Lazy Developers
 As the name says, these are a couple of shortcuts that you can use on Windows to acess GIT capabilities in an easier way.
