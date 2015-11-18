@@ -36,7 +36,12 @@ The shortcuts and commands under each one are:
 
 ## Installation
 ### Through Installer
-
+  - Download de lastest stable version [here](../../releases/tag/v0.0.2)
+  - Extract the content of compressed archive to any directory of your computer
+  - Open a Windows Command Prompt (press WIN+R, type CMD and press ENTER/RETURN)
+  - Under the directory you extracted the files, type: install.bat
+  - Choose if you want to install the files under C:\Windows directory or
+    press N to type a directory of your preference
 
 ### Manually
 Simply drop the batch files on any directory on your windows path. At my computer I put them on C:\Windows, but you can feel free to put at any place.
