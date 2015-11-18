@@ -13,7 +13,7 @@ IF %ERRORLEVEL% == 2 GOTO askdir
 GOTO install
 
 :help
-ECHO GICOSH - Git Command Shortcuts for Lazy Developers - Installer
+ECHO gicosh - GIT Command Shortcuts for Windows and Lazy Developers - INSTALLER
 ECHO Usage:
 ECHO   install [/s^|/silent]
 ECHO.

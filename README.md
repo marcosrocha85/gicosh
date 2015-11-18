@@ -1,3 +1,5 @@
+Current version: [v0.0.2](releases/tag/v0.0.2)
+
 # gicosh - GIT Command Shortcuts for Windows and Lazy Developers
 As the name says, these are a couple of shortcuts that you can use on Windows to acess GIT capabilities in an easier way.
 Each batch file invokes one of many GIT commands has on. You can pass parameters through shortcuts if the GIT command under it allows to.
@@ -33,6 +35,10 @@ The shortcuts and commands under each one are:
 |gui.bat|git gui|
 
 ## Installation
+### Through Installer
+
+
+### Manually
 Simply drop the batch files on any directory on your windows path. At my computer I put them on C:\Windows, but you can feel free to put at any place.
 Example:
   - Download and extract (or copy) the files on C:\gicosh
