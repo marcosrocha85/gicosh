@@ -22,6 +22,7 @@ echo ºgo.bat    ºgit checkout                          º
 echo ºgp.bat    ºgit pull                              º
 echo ºgpsh.bat  ºgit push                              º
 echo ºgr.bat    ºgit reset HEAD                        º
+echo ºgrb.bat   ºgit rebase                            º
 echo ºgrh.bat   ºgit reset HEAD --hard                 º
 echo ºgrm.bat   ºgit rm                                º
 echo ºgs.bat    ºgit status                            º

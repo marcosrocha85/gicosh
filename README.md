@@ -25,6 +25,7 @@ The shortcuts and commands under each one are:
 |gp.bat|git pull|
 |gpsh.bat |git push|
 |gr.bat|git reset HEAD|
+|grb.bat|git rebase|
 |grh.bat|git reset HEAD --hard|
 |grm.bat|git rm|
 |gs.bat|git status|
