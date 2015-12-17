@@ -12,9 +12,9 @@ GOTO :eof
 :help
 ECHO GSI (Git Submodule Init) - Initializes all submodules
 ECHO Usage:
-ECHO   gsi [-u] [--no-rebase]
+ECHO   gsi [-u] [-r]
 ECHO.
 ECHO Where:
-ECHO   -u           Is an optional parameter to imediately call GSU after a
-ECHO                submodule initialization.
-ECHO   --no-rebase  Tells GSU to not execute --remote --rebase parameters
+ECHO   -u  Is an optional parameter to imediately call GSU after a
+ECHO       submodule initialization.
+ECHO   -r  Tells GSU to execute --remote --rebase parameters
