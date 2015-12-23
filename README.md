@@ -1,6 +1,7 @@
-Current version: [v0.0.2](../../releases/tag/v0.0.2)
+Current version: [v0.0.3](../../releases/tag/v0.0.3)
 
 # gicosh - GIT Command Shortcuts for Windows and Lazy Developers
+#### From Marcos Rocha - [http://marcosrocha.net/](http://marcosrocha.net/)
 As the name says, these are a couple of shortcuts that you can use on Windows to acess GIT capabilities in an easier way.
 Each batch file invokes one of many GIT commands has on. You can pass parameters through shortcuts if the GIT command under it allows to.
 It's useful when developers, like me, like to use pure git commands instead of some visual tool.
