@@ -15,7 +15,7 @@ echo You should type a comment.
 echo.
 echo Ex:
 echo   gc "Added validation of user's empty password on controller X"
-echo ou
+echo or
 echo   gc Added validation of user's empty password on controller X
 echo.
 
