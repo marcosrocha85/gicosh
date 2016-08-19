@@ -1,0 +1,166 @@
+# GICOSH - Git Command Shortcuts for Lazy Developers
+# From Marcos Rocha - http://marcosrocha.net/
+# First of all, our auxiliar functions
+git_add() {
+	git add $@
+}
+
+git_branch() {
+	git branch $@
+}
+
+git_commit_error() {
+	echo "You should type a comment."
+	echo ""
+	echo "Ex:"
+	echo "  gc \"Added support for linux and mac\""
+	echo "or"
+	echo "  gc Added support for linux and mac"
+}
+
+git_commit() {
+	comment=$@
+	if [ -z "$comment" ]
+	then
+		git_commit_error
+	fi
+
+	git commit -m "$comment"
+}
+
+git_clean() {
+	git clean $@
+}
+
+git_diff() {
+	git diff $@
+}
+
+git_diff_tool() {
+	git difftool $@
+}
+
+git_fetch() {
+	git fetch $@
+}
+
+git_log() {
+	git log $@
+}
+
+git_merge() {
+	git merge $@
+}
+
+git_merge_tool() {
+	git mergetool $@
+}
+
+git_checkout() {
+	git checkout $@
+}
+
+git_pull() {
+	git pull $@
+}
+
+git_push() {
+	git push $@
+}
+
+git_reset_head() {
+	git reset HEAD $@
+}
+
+git_rebase() {
+	git rebase $@
+}
+
+git_rm() {
+	git rm $@
+}
+
+git_status() {
+	git status $@
+}
+
+git_stash() {
+	git stash $@
+}
+
+git_submodule_update_help() {
+	echo "GSU (Git Submodule Update) - Updates all submodules"
+	echo "Usage:"
+	echo "  gsu [-r]"
+	echo ""
+	echo "Where:"
+	echo "  -r  Tells GSU to execute --remote --rebase of"
+	echo "      git submodule parameters"
+}
+
+git_submodule_update() {
+  if [ $1 == "-?" ]
+  then
+  	git_submodule_update_help
+  fi
+
+  echo "Updating submodules..."
+  git submodule update
+  if [ $1 == "-r" ]
+  then
+  	echo "Rebasing submodules..."
+  	git submodule update --remote --rebase
+  fi
+}
+
+git_submodule_init_help() {
+	echo "GSI (Git Submodule Init) - Initializes all submodules"
+	echo "Usage:"
+	echo "  gsi [-u] [-r]"
+	echo ""
+	echo "Where:"
+	echo "  -u  Is an optional parameter to imediately call GSU after a"
+	echo "      submodule initialization."
+	echo "  -r  Tells GSU to execute --remote --rebase parameters"
+}
+
+git_submodule_init() {
+	if [ $1 == "-?" ]
+	then
+		git_submodule_init_help
+	fi
+	echo "Initializing submodules..."
+	git submodule init
+	if [ $1 == "-u" ]
+	then
+		git_submodule_update ${@:2}
+	fi
+}
+
+git_tag() {
+	git tag $@
+}
+
+# Now, the aliases
+alias ga=git_add
+alias gb=git_branch
+alias gc=git_commit
+alias gcl=git_clean
+alias gd=git_diff
+alias gdtool=git_diff_tool
+alias gf=git_fetch
+alias gl=git_log
+alias gm=git_merge
+alias gmtool=git_merge_tool
+alias go=git_checkout
+alias gp=git_pull
+alias gpsh=git_push
+alias gr=git_reset_head
+alias grb=git_rebase
+alias grh="git_reset_head --hard"
+alias grm=git_rm
+alias gs=git_status
+alias gsh=git_stash
+alias gsi=git_submodule_init
+alias gsu=git_submodule_update
+alias gt=git_tag
