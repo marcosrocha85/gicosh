@@ -39,7 +39,7 @@ The shortcuts and commands under each one are:
 
 ## Installation
 ### Through Windows Installer
-  - Download de lastest stable version [here](../../releases/tag/v0.0.4)
+  - Download de lastest stable version [here](../../releases/tag/v0.0.5)
   - Extract the content of compressed archive to any directory of your computer
   - Open a Windows Command Prompt (press WIN+R, type CMD and press ENTER/RETURN)
   - Under the directory you extracted the files, type: install.bat
