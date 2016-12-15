@@ -23,9 +23,13 @@ git_commit() {
 	if [ -z "$comment" ]
 	then
 		git_commit_error
+		return
 	fi
 
 	git commit -m "$comment"
+}
+git_clone() {
+	git clone $@
 }
 
 git_clean() {
@@ -65,7 +69,14 @@ git_pull() {
 }
 
 git_push() {
-	git push $@
+	params=$@
+	if [[ $1 == "-p" ]]
+	then
+		echo "GICOSH is pulling first"
+		git_pull
+		params=${@:2}
+	fi
+	git push $params
 }
 
 git_reset_head() {
@@ -99,14 +110,15 @@ git_submodule_update_help() {
 }
 
 git_submodule_update() {
-  if [ $1 == "-?" ]
+	if [[ $1 == "-?" ]]
   then
   	git_submodule_update_help
+		return
   fi
 
   echo "Updating submodules..."
   git submodule update
-  if [ $1 == "-r" ]
+	if [[ $1 == "-r" ]]
   then
   	echo "Rebasing submodules..."
   	git submodule update --remote --rebase
@@ -125,13 +137,14 @@ git_submodule_init_help() {
 }
 
 git_submodule_init() {
-	if [ $1 == "-?" ]
+	if [[ $1 == "-?" ]]
 	then
 		git_submodule_init_help
+		return
 	fi
-	echo "Initializing submodules..."
+	echo "GICOSH is initializing submodules..."
 	git submodule init
-	if [ $1 == "-u" ]
+	if [[ $1 == "-u" ]]
 	then
 		git_submodule_update ${@:2}
 	fi
@@ -141,11 +154,15 @@ git_tag() {
 	git tag $@
 }
 
+git_gui() {
+	git gui $@ &
+}
 # Now, the aliases
 alias ga=git_add
 alias gb=git_branch
 alias gc=git_commit
-alias gcl=git_clean
+alias gcl=git_clone
+alias gcln=git_clean
 alias gd=git_diff
 alias gdtool=git_diff_tool
 alias gf=git_fetch
@@ -164,3 +181,4 @@ alias gsh=git_stash
 alias gsi=git_submodule_init
 alias gsu=git_submodule_update
 alias gt=git_tag
+alias gui=git_gui

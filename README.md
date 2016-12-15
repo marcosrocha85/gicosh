@@ -1,4 +1,4 @@
-Current version: [v0.0.4](../../releases/tag/v0.0.4)
+Current version: [v0.0.5](../../releases/tag/v0.0.5)
 
 # gicosh - GIT Command Shortcuts for Lazy Developers
 #### From Marcos Rocha - [http://marcosrocha.net/](http://marcosrocha.net/)
@@ -12,29 +12,30 @@ The shortcuts and commands under each one are:
 |--------|--------|--------|-----------|
 |ga| [x] | [x] |git add|
 |gb| [x] | [x] |git branch|
+|gcln| [x] | [x] |git clean|
+|gcl| [x] | [x] |git clone|
 |gc| [x] | [x] |git commit|
-|gcl| [x] | [x] |git clean|
-|gd| [x] | [x] |git diff|
 |gdtool| [x] | [x] |git difftool|
+|gd| [x] | [x] |git diff|
 |gf| [x] | [x] |git fetch|
 |ghelp| [x] | [ ] |This help|
 |gk| [x] | [ ] |gitk|
 |gl| [x] | [x] |git log|
-|gm| [x] | [x] |git merge|
 |gmtool| [x] | [x] |git mergetool|
+|gm| [x] | [x] |git merge|
 |go| [x] | [x] |git checkout|
-|gp| [x] | [x] |git pull|
 |gpsh | [x] | [x] |git push|
-|gr| [x] | [x] |git reset HEAD|
+|gp| [x] | [x] |git pull|
 |grb| [x] | [x] |git rebase|
 |grh| [x] | [x] |git reset HEAD --hard|
 |grm| [x] | [x] |git rm|
-|gs| [x] | [x] |git status|
+|gr| [x] | [x] |git reset HEAD|
 |gsh| [x] | [x] |git stash|
 |gsi| [x] | [x] |git submodule init|
 |gsu| [x] | [x] |git submodule update --remote --rebase|
+|gs| [x] | [x] |git status|
 |gt| [x] | [x] |git tag|
-|gui| [x] | [ ] |git gui|
+|gui| [x] | [x] |git gui|
 
 ## Installation
 ### Through Windows Installer
