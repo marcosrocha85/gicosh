@@ -69,14 +69,21 @@ git_pull() {
 }
 
 git_push() {
-	params=$@
-	if [[ $1 == "-p" ]]
-	then
-		echo "GICOSH is pulling first"
-		git_pull
-		params=${@:2}
-	fi
-	git push $params
+    if [[ $1 == "-p" ]]; then
+        echo "GICOSH is pulling first"
+        git_pull
+        shift
+    fi
+
+    local remote="${1:-origin}"
+    local branch="${2:-$(git rev-parse --abbrev-ref HEAD)}"
+
+    if ! git rev-parse --abbrev-ref --symbolic-full-name "${branch}@{u}" > /dev/null 2>&1; then
+        echo -e "\e[33mUpstream não configurado para o branch '\e[34m$branch\e[33m'. Configurando com: \e[34m$remote/$branch\e[33m\e[0m"
+        git push --set-upstream "$remote" "$branch"
+    else
+        git push
+    fi
 }
 
 git_reset_head() {
@@ -131,7 +138,7 @@ git_submodule_init_help() {
 	echo "  gsi [-u] [-r]"
 	echo ""
 	echo "Where:"
-	echo "  -u  Is an optional parameter to imediately call GSU after a"
+	echo "  -u  Is an optional parameter to immediately call GSU after a"
 	echo "      submodule initialization."
 	echo "  -r  Tells GSU to execute --remote --rebase parameters"
 }
@@ -157,7 +164,24 @@ git_tag() {
 git_gui() {
 	git gui $@ &
 }
+
+show_git_aliases() {
+    awk -F '=' '/^alias/ {
+        alias_name = substr($1, 7);
+        if (substr($2,1,1)=="\"" || substr($2,1,1)=="\047") {
+            q = substr($2,1,1);
+            if (substr($2, length($2), 1) == q)
+                command = substr($2, 2, length($2)-2);
+            else
+                command = substr($2, 2);
+        } else {
+            command = $2;
+        }
+        printf "\033[32m%-20s\033[0m \033[34m%s\033[0m\n", alias_name, command;
+    }' ~/.bash_aliases_gicosh
+}
 # Now, the aliases
+alias show.git.aliases=show_git_aliases
 alias ga=git_add
 alias gb=git_branch
 alias gc=git_commit
@@ -166,8 +190,10 @@ alias gcln=git_clean
 alias gd=git_diff
 alias gdtool=git_diff_tool
 alias gf=git_fetch
+alias gfp="git_fetch -p"
 alias gl=git_log
 alias gm=git_merge
+alias gfpp="gfp && gp"
 alias gmtool=git_merge_tool
 alias go=git_checkout
 alias gp=git_pull
